@@ -1,0 +1,23 @@
+{
+  "name": "js_mock_v1_button_listen",
+  "version": "1.0.0",
+  "description": "モックｖ１のボタンを押されたことを検知する",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mkXultra/js_mock_v1_button_listen.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mkXultra/js_mock_v1_button_listen/issues"
+  },
+  "homepage": "https://github.com/mkXultra/js_mock_v1_button_listen#readme",
+  "dependencies": {
+    "rpi-gpio": "^2.1.7"
+  }
+}
