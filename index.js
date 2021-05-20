@@ -29,13 +29,20 @@ const BUTTON_PIN = gpioToPinMap[buttonGpio];
 
 async function main(){
   await gpio.setup(LED_PIN, gpio.DIR_OUT);
-  await gpio.setup(BUTTON_PIN, gpio.DIR_OUT);
-  while (true) {
-    await gpio.change(BUTTON_PIN);
-    console.log('button pushed');
-    console.log("main -> await gpio.read(LED_PIN)", await gpio.read(LED_PIN))
-    await gpio.write(LED_PIN, !(await gpio.read(LED_PIN)));
-  }
+  await gpio.setup(BUTTON_PIN, gpio.DIR_IN);
+
+  gpio.on("change", (channel,val)=>{
+    console.log("main -> val", val)
+    if(channel === BUTTON_PIN){
+      console.log("same val", val)
+    }
+  })
+  // while (true) {
+  //   await gpio.change(BUTTON_PIN);
+  //   console.log('button pushed');
+  //   console.log("main -> await gpio.read(LED_PIN)", await gpio.read(LED_PIN))
+  //   await gpio.write(LED_PIN, !(await gpio.read(LED_PIN)));
+  // }
 }
 
 main()
