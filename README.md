@@ -1,0 +1,2 @@
+# js_mock_v1_button_listen
+モックｖ１のボタンを押されたことを検知する
