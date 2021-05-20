@@ -24,10 +24,8 @@ const gpioToPinMap = {
   16:37,
   17:11,
 }
-let ledOn = true;
 const LED_PIN = gpioToPinMap[ledGpio];
 const BUTTON_PIN = gpioToPinMap[buttonGpio];
-const LED_BLINK_DELAY_MS = 1000;  // 1秒毎にLチカ
 
 async function main(){
   await gpio.setup(LED_PIN, gpio.DIR_OUT);
